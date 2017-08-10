@@ -1,0 +1,13 @@
+<form [formGroup]="form">
+  
+  <field label="Flags">
+    <checkbox-control
+        formControlName="tracking"
+        label="Tracking">
+    </checkbox-control>
+  </field>
+  
+  <pre>{{form.value | json}}</pre>
+
+</form>
+

@@ -1,0 +1,18 @@
+<div class="content-header">
+  <h2>
+    {{name}}
+  </h2>
+  
+  <p class="description"
+     [innerHTML]="desc"></p>
+</div>
+
+<div id="content"
+     class="content-box">
+  <div class="section"
+       [innerHTML]="dependencies | MarkdownToHtml"></div>
+  <div class="section"
+       [innerHTML]="installation | MarkdownToHtml"></div>
+  <div class="section"
+       [innerHTML]="readingDocumentation | MarkdownToHtml"></div>
+</div>

@@ -1,0 +1,31 @@
+<form [formGroup]="form">
+  
+  <field class="clearfix"
+         label="Menu Position">
+    <div radioButtonGroup
+         class="btn-group btn-group-form"
+         formControlName="position">
+      
+      <label class="btn btn-primary">
+        <input type="radio"
+               value="left">
+        Left
+      </label>
+      
+      <label class="btn btn-primary">
+        <input type="radio"
+               value="center">
+        Center
+      </label>
+      
+      <label class="btn btn-primary">
+        <input type="radio"
+               value="right">
+        Right
+      </label>
+    </div>
+    
+  </field>
+  <pre>{{form.value | json}}</pre>
+
+</form>

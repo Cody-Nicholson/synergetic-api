@@ -1,0 +1,61 @@
+<div class="box table-box">
+  
+  <syn-table class="box-table"
+            [rows]="dataRows">
+    
+    <syn-thead>
+      <li synTh
+          class="col-xs-1"
+          label="ID"
+          key="id">
+      </li>
+      
+      <li synTh
+          class="col-xs-7"
+          [defaultSort]="true"
+          label="Name"
+          key="name">
+      </li>
+      
+      <li synTh
+          class="col-xs-4"
+          label="Clicks"
+          key="clicks">
+      </li>
+    </syn-thead>
+    
+    <syn-tbody>
+      
+      <li class="row"
+          title-row>
+        <ul class="tr">
+          <li class="td col-xs-1">
+            Total
+          </li>
+          <li class="td col-xs-7">
+          </li>
+          <li class="td col-xs-4">
+            {{total}}
+          </li>
+        </ul>
+      </li>
+      
+      <ng-template let-row="row">
+        <li class="td col-xs-1">
+          {{row.id}}
+        </li>
+        
+        <li class="td col-xs-7">
+          {{row.name}}
+        </li>
+        
+        <li class="td col-xs-4 ellipsis-cell">
+          {{row.clicks}}
+        </li>
+      </ng-template>
+    
+    </syn-tbody>
+  
+  </syn-table>
+
+</div>

@@ -1,0 +1,9 @@
+
+<div  class="row" parallelBars>
+
+  <div class="p-group" *ngFor="let bar of bars; let i = index; trackBy: trackByIndex">
+    <div parallelBar class="parallel-bar-bg" [value]="bar"></div>
+    {{bar/total | percent: '1.0-0'}}
+  </div>
+  
+</div>

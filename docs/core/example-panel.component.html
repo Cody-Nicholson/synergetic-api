@@ -1,0 +1,38 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      {{title}}
+      <a class="pull-right code-link"
+         (click)="showSource = !showSource">
+        <span class="glyphicon glyphicon-menu-left"></span>
+        <span class="glyphicon glyphicon-menu-right"></span>
+      </a>
+    </h3>
+  </div>
+  
+  <ul class="list-group">
+    <li [ngClass]="{
+          hide: !showSource
+        }"
+        class="list-group-item">
+      <tabset type="pills">
+        <tab heading="HTML">
+          <pre #htmlEle><code class="html">{{html}}</code></pre>
+        </tab>
+        <tab heading="TS">
+          <section
+              [innerHTML]="ts"
+              highlight-js-content=".highlight">
+          </section>
+        </tab>
+      </tabset>
+    </li>
+  
+  </ul>
+  
+  <div class="panel-body">
+    <ng-content></ng-content>
+  </div>
+
+</div>
+

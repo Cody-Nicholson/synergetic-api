@@ -1,0 +1,14 @@
+<form [formGroup]="form">
+  
+  <field label="First Name">
+    <syn-search-dropdown
+        formControlName="firstName"
+        [options]="names"
+        (selected)="selectItem($event)">
+    </syn-search-dropdown>
+    
+  </field>
+  
+  <div>Current Selection: {{selectedLabel}}</div>
+
+</form>
