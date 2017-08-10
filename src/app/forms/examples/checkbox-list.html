@@ -1,0 +1,13 @@
+<form [formGroup]="form">
+  
+  <field label="Permissions">
+    <checkbox-list
+        class="checkbox-group"
+        formControlName="permissions"
+        [options]="permissionItems">
+    </checkbox-list>
+  </field>
+  
+  <pre>{{form.value | json}}</pre>
+</form>
+

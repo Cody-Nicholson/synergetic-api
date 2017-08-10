@@ -1,0 +1,79 @@
+<div class="row">
+  <div class="col-lg-10 col-lg-offset-1 col-xs-12">
+    
+    
+  
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-10 col-lg-offset-1 col-xs-12">
+    
+    <div class="box table-box">
+      
+      <syn-table class="box-table"
+                *ngIf="dataRows"
+                [rows]="dataRows">
+        
+        <syn-thead>
+          <li synTh
+              class="col-xs-1"
+              label="ID"
+              key="id">
+          </li>
+          
+          <li synTh
+              class="col-xs-7"
+              [defaultSort]="true"
+              label="Name"
+              key="name">
+          </li>
+          
+          <li synTh
+              class="col-xs-4"
+              label="Timezone"
+              key="timezone">
+          </li>
+        </syn-thead>
+        
+        <syn-tbody>
+          
+          <li class="row"
+              title-row>
+            <ul class="tr">
+              <li class="td col-xs-1">
+                Total
+              </li>
+              <li class="td col-xs-7">
+                2
+              </li>
+              <li class="td col-xs-4">
+                2
+              </li>
+            </ul>
+          </li>
+          
+          <ng-template let-row="row">
+            <li class="td col-xs-1">
+              {{row.id}}
+            </li>
+            
+            <li class="td col-xs-7">
+              {{row.name}}
+            </li>
+            
+            <li class="td col-xs-4 ellipsis-cell">
+              {{row.timezone}}
+            </li>
+          </ng-template>
+        
+        </syn-tbody>
+      
+      </syn-table>
+    
+    </div>
+  
+  </div>
+</div>
+
+

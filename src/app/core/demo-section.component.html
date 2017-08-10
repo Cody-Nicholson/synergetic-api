@@ -1,0 +1,24 @@
+<div class="content-header">
+  <h2>{{name}}
+    <a [href]="src" target="_blank">
+      <img src="assets/images/link-doc.png" alt=""/>
+    </a>
+  </h2>
+
+  <p class="description" [innerHTML]="title | MarkdownToHtml"></p>
+</div>
+
+<div id="content" class="content-box">
+  <div id="example" class="section">
+    <h3>Examples</h3>
+
+    <div class="item">
+      <ng-content></ng-content>
+    </div>
+  </div>
+
+  <div id="api" class="section">
+    <h3>Api</h3>
+    <div class="item list-container" [innerHTML]="readme | MarkdownToHtml" ngNonBindable></div>
+  </div>
+</div>

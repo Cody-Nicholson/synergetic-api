@@ -1,0 +1,5 @@
+<counter [countTo]="clicks"
+         [duration]="4500"
+         (count)="value = $event">
+  {{value | number:'1.2-2'}}
+</counter>
